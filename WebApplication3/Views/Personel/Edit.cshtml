@@ -1,0 +1,30 @@
+﻿@model WebApplication3.Models.Personel
+@{
+}
+<div class="row">
+	<div class="col-md-8">
+		<form asp-action="Edit" method="Post" asp-controller="Personel" >
+			<input type="hidden" asp-for="Id"/>
+			<div class="mb-3">
+				<label asp-for="Ad">Adını girin</label>
+				<input asp-for="Ad" placeholder="Adınızı Girin" />
+			</div>
+			<div class="mb-3">
+				<label asp-for="Soyad">Soyadınızı girin</label>
+				<input asp-for="Soyad" placeholder="Adınızı Girin" />
+			</div>
+			<div class="mb-3">
+				<label asp-for="Departman">Departman girin</label>
+				<input asp-for="Departman" placeholder="Adınızı Girin" />
+			</div>
+			<div class="mb-3">
+				<label asp-for="Maas">Maaş Girin</label>
+				<input asp-for="Maas" placeholder="Maaş Girin" />
+			</div>
+			<div class="mb-3">
+				
+				<input type="submit" value="Düzeltme" />
+			</div>
+		</form>
+	</div>
+</div>

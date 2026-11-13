@@ -1,0 +1,29 @@
+﻿@model List<WebApplication3.Models.Personel>
+@{
+}
+<a class="btn btn-warning" asp-action="Create">Yeni Kayıt</a>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+		<th>Adı</th>
+			<th>Soyadı</th>
+			<th>Departman</th>
+			<th>Maaş</th>
+			<th>Düzelt</th>
+			<th>Silme</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var item in Model)
+		{
+			<tr>
+				<td>@item.Ad</td>
+				<td>@item.Soyad</td>
+				<td>@item.Departman</td>
+				<td>@item.Maas</td>
+				<td><a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-danger">Düzelt</a></td>
+				<td><a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-secondary">Silme</a></td>
+			</tr>
+		}
+	</tbody>
+</table>

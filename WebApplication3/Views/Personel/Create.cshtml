@@ -1,0 +1,47 @@
+﻿@model WebApplication3.Models.Personel
+@{
+}
+
+<div class="card-body">
+    <form method="post" action="/Personel/Create">
+
+        <div class="mb-3">
+
+            <label for="Ad" class="form-label">Ad</label>
+            <input type="text" class="form-control"
+                   id="Ad" name="Ad" placeholder="Adınızı giriniz" >
+            <span asp-validation-for="Ad" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label for="Soyad" class="form-label">Soyad</label>
+            <input type="text" class="form-control"
+                   id="Soyad" name="Soyad" placeholder="Soyadınızı giriniz" >
+            <span asp-validation-for="Soyad" class="text-danger"></span>
+        </div>
+                <div class="mb-3">
+            <label for="Departman" class="form-label">Departman</label>
+            <select class="form-select" id="Departman" name="Departman" >
+                <option value="">Departman seçiniz</option>
+                <option value="Yazılım">Yazılım</option>
+                <option value="Muhasebe">Muhasebe</option>
+                <option value="İnsan Kaynakları">İnsan Kaynakları</option>
+                <option value="Pazarlama">Pazarlama</option>
+                <option value="Satış">Satış</option>
+            </select>
+            <span asp-validation-for="Departman" class="text-danger"></span>
+        </div>
+                <div class="mb-3">
+            <label for="Maas" class="form-label">Maaş</label>
+            <input type="number" step="0.01" class="form-control"
+                   id="Maas" name="Maas" placeholder="Maaş giriniz" >
+            <span asp-validation-for="Maas" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success">
+            Kaydet
+        </button>
+               <button type="reset" class="btn btn-secondary">
+            Temizle
+        </button>
+            </form>
+</div>
